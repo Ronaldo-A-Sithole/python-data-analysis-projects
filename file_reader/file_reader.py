@@ -1,30 +1,23 @@
-import os
-print(os.getcwd())
+#Read file
 
-try:
-    with open("data.txt", "r") as file:
-        content = file.read()
-except FileNotFoundError:
-    print("Error: data.txt not found")
+file = open("file_reader/data.txt", "r")
+content = file.read()
+file.close()
 
-with open("data.txt", "r") as file:
-    content = file.read()
+print(content)
 
-print("File content:\n", content)
-
-# Count words
+#Count words
 words = content.split()
 print("Total words:", len(words))
 
-# Count lines
+#Count lines
 lines = content.split("\n")
 print("Total lines:", len(lines))
 
-# Count word frequency
+#Find most common word
 word_count = {}
 
 for word in words:
-    word = word.lower()  # normalize
     if word in word_count:
         word_count[word] += 1
     else:
