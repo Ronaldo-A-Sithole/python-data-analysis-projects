@@ -1,6 +1,6 @@
 number = int(input("Enter a number: "))
 
-for num in range(1, 6):
+for num in range(1, 15):
     print("\nTable for", num)
 
     for i in range(1, 11):
